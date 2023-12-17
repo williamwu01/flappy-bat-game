@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./assets/style/style.css">
+	<script defer src="/assets/script/script.js"></script>
+	<title>Flappy Bat Game</title>
+</head>
+<body>
+<header>
+	<h1>Flappy Bat</h1>
+	<h3>Score: <span id="scoreSpan">0</span></h3>
+	<!-- <h3>High Score: <span id="highscore">0</span></h3> -->
+</header>
+<main>
+	<section>
+		<div id="start-screen" class="control-screen">
+			<h1>Start Bat Run!</h1>
+			<img class="start-bat" src="./assets/bat.gif" alt="">
+			<p>Instructions: Click  your left mouse button to move bat up. Avoid hitting the spikes!</p>
+			<button id="start-button">Start Game</button>
+		</div>
+	</section>
+	<section>
+		<div id="game" class="hidden">
+			<img class="game-bg" src="./assets/game-bg.jpg" alt="">
+			<div id="spike-top"></div>
+			<div id="spike-bottom"></div>
+			<div id="gap"></div>
+			<div>
+				<img id="character" src="./assets/bat.gif" alt="">
+			</div>
+		</div>
+	</section>
+	<section>
+		<div id="end-screen" class="control-screen hidden">
+			<h1>You crashed!</h1>
+			<img class="deadbat" src="/assets/batdead.gif" alt="bat died">
+			<p>Click the "play again" button to try again</p>
+			<button id="play-again">Play Again</button>
+			<button class="#" id="credit-button">Credits</button>
+		</div>
+	</section>
+	<section>
+		<div id="credit-screen" class="control-screen hidden">
+			<div class="sources">
+				<p>Insperation - Flappy Bird - by a Developer, Dong Nguyen.</p>
+				<p>Flappy bird gameplay - by <a href="https://www.youtube.com/watch?v=fQoJZuBwrkU">IGN</a> on Youtube</p>
+				<p><b>Bat image </b> - <a href="https://www.spriters-resource.com/fullview/16205/">The VG resource</a>, cut and edited myself to make into a gif for this personal project.</p>
+				<p><b>Background image</b> - by ThehardworkingAJ from<a href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4dbacaa9-1e75-49f0-88a4-9720265afe29/d7mlw3c-614f7d1f-c7e1-48ba-bd0d-b6850bfc9173.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzRkYmFjYWE5LTFlNzUtNDlmMC04OGE0LTk3MjAyNjVhZmUyOVwvZDdtbHczYy02MTRmN2QxZi1jN2UxLTQ4YmEtYmQwZC1iNjg1MGJmYzkxNzMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.SpPMQePbkhwP4xgWiun-W_V2JombIFgDNeLcqu0VIXc"> Deviantart.com</a></p>
+				<p><b>Tension</b> - by Alex-Productions from <a href="https://www.free-stock-music.com/search.php?cat=&mood=14&license=&bpm=&length=&musictype=&usage=credit&keyword=">free-stock-music.com</a></p>
+				<p>Big thanks to youtuber <a href="https://www.youtube.com/watch?v=3SsYZDJdeXk&t=219s">KnifeCircus</a> for inspering me with keyframe idea in CSS & <a href="https://www.youtube.com/watch?v=cXgA1d_E-jY&t=1124s">The Coding Train</a> for inspiring me with the logic behind gravity.</p>
+			</div>
+			<button id="home-button">Home</button>
+		</div>
+	</section>
+	<audio id="gameAudio" loop>
+		<source src="/assets/alex-productions-tension.mp3" type="audio/mp3">
+	</audio>
+</main>
+<footer>&copy; Copyright 2023 William Wu</footer>
+</body>
+</html>
