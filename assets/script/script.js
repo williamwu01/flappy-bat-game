@@ -1,10 +1,10 @@
 let topSpikeHeight = 0;
 let score = 0;
 let intervalId;
+let highScore = localStorage.getItem('highScore') || 0;
 const MAX_HEIGHT = 500;
 const GAME_SCREEN_HEIGHT = 600;
 const GAP = GAME_SCREEN_HEIGHT - MAX_HEIGHT;
-// const HIGH_SCORE_KEY = "highScore";
 
 //add level difficulties if enough time
 // const difficulties = {
@@ -48,6 +48,12 @@ const game = {
 		score = 0;
 		const scoreSpan = document.getElementById('scoreSpan');
 		scoreSpan.textContent = score;
+
+			if(score > highScore) {
+				highScore = score;
+				localStorage.setItem('highScore', highScore);
+				console.log("NEW HIGHSCORE");
+			}
 	},
 
 
@@ -60,6 +66,9 @@ const game = {
 		const {startScreen, gameScreen, creditScreen} = this.el.screens;
 		const {switchScreen} = this;
 		const audio = document.querySelector('audio');
+
+		const highScoreSpan = document.getElementById('highScoreSpan');
+		highScoreSpan.textContent = highScore;
 
 		//btn to start game
 		start.startGameBtn.addEventListener('click', ()=>{
@@ -75,6 +84,13 @@ const game = {
 				console.log('current Score', score);
 				const scoreSpan = document.getElementById('scoreSpan');
 				scoreSpan.textContent = score;
+
+				if(score > highScore){
+					highScore = score;
+					const highScoreSpan = document.getElementById('highScoreSpan');
+					highScoreSpan.textContent = highScore
+				}
+
 			},1000);
 
 			//play audo when switching to game screen 
