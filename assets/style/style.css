@@ -50,10 +50,6 @@ footer {
 	width: 300px;
 	height: 400px;
 	margin: 0 auto;
-	/* position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%); */
 	text-align: center;
 	line-height: 3;
 	z-index: 10;
@@ -125,20 +121,6 @@ footer {
 		left: -500px;
 	}
 }
-
-/*gap*/
-/* #gap {
-	width: 50px;
-	height: 100px;
-	background-color: brown;
-	z-index: 1;
-	position: relative;
-	left: 450px;
-	top: -500px;
-	animation: spike 2s infinite;
-} */
-
-/*End Screen*/
 
 /*credit screen*/
 #credit-button {

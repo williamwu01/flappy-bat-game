@@ -49,6 +49,7 @@ const game = {
 		const scoreSpan = document.getElementById('scoreSpan');
 		scoreSpan.textContent = score;
 
+			//storing highscore
 			if(score > highScore) {
 				highScore = score;
 				localStorage.setItem('highScore', highScore);
@@ -66,7 +67,7 @@ const game = {
 		const {startScreen, gameScreen, creditScreen} = this.el.screens;
 		const {switchScreen} = this;
 		const audio = document.querySelector('audio');
-
+		//sets up init highscore
 		const highScoreSpan = document.getElementById('highScoreSpan');
 		highScoreSpan.textContent = highScore;
 
@@ -85,6 +86,7 @@ const game = {
 				const scoreSpan = document.getElementById('scoreSpan');
 				scoreSpan.textContent = score;
 
+				//score change from score to highscore if score > highscore in game
 				if(score > highScore){
 					highScore = score;
 					const highScoreSpan = document.getElementById('highScoreSpan');
